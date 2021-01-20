@@ -4,16 +4,17 @@
 #define sqrt2 1.41421356237
 
 
-double potencia (double base, int exponente){
+
+double power (double base, int exponent){
 	int i;
 	double output = 1;
-	for(i=0;i<exponente;i++){
+	for(i=0;i<exponent;i++){
 		output *= base;
 	}
 	return output;
 } 
 
-double calcular_pi(int iteraciones){
+double calculate_pi(int iterations){
 	int i;
 	int j;
 	double output = sqrt2/2;
@@ -21,14 +22,14 @@ double calcular_pi(int iteraciones){
 	double temp_den;
 
 
-	for (i = 1 ; i <= iteraciones ; i++){
+	for (i = 1 ; i <= iterations ; i++){
 		temp_num = 1;
 		temp_den = 1;
 		for (j = 1 ; j <= i ; j++){
 			temp_num *= 2*j -1;
 			temp_den *= 2*j;
 		}
-		output += temp_num * potencia(sqrt2/2, 2*i+1) / (temp_den * (2*i + 1));
+		output += temp_num * power(sqrt2/2, 2*i+1) / (temp_den * (2*i + 1));
 
 	}
 
@@ -38,11 +39,11 @@ double calcular_pi(int iteraciones){
 
 
 int main(){
-	double valor_pi;
+	double value_pi;
 
-	valor_pi = calcular_pi(10);
-	std::string valor_pi_string = std::to_string(valor_pi);
-	std::cout << valor_pi_string <<"\n";
+	value_pi = calculate_pi(10);
+	std::string value_pi_string = std::to_string(value_pi);
+	std::cout << value_pi_string <<"\n";
 
 
 
