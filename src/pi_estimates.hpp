@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string.h>
+#include <iomanip>
+#include <math.h>
+
+#define sqrt2 1.414213562373095048801688724209698078569671875376948073176679737990732478462107038850387534327641572735013846230912297024924836055850737212644121497099935831
+#define PI_100 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
+
+
+
+long double power (long double base, int exponent);
+
+long double abs_val (long double a);
+
+long double calculate_pi_taylor(int nb_decimal_places);
+
+long double calculate_pi_integral(int nb_decimal_places);
